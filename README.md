@@ -1,2 +1,2 @@
-# famous_quotes
-You can manage famous quotes.
+# trial_use
+Repositories to try new technologies.
