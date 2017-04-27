@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :author do
-    name "MyString"
-    country "MyString"
+    name "ななしたろう"
+    country "オーストラリア"
   end
 end
