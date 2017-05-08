@@ -1,0 +1,40 @@
+<%= form_for(author) do |f| %>
+  <% if author.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(author.errors.count, "error") %> prohibited this author from being saved:</h2>
+
+      <ul>
+      <% author.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :country %>
+    <%= f.text_field :country %>
+  </div>
+
+  <div class="radio">
+    <%= f.label :sex %>
+    <%= f.radio_button :sex, :male %>
+    <%= f.label :sex, 'male', value: :male %>
+    <%= f.radio_button :sex, :female %>
+    <%= f.label :sex, 'female', value: :female %>
+  </div>
+
+  <div class="text_area">
+    <%= f.label :note %>
+    <%= f.text_area :note %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
