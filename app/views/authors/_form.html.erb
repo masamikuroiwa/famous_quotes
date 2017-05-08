@@ -21,6 +21,14 @@
     <%= f.text_field :country %>
   </div>
 
+  <div class="radio">
+    <%= f.label :sex %>
+    <%= f.radio_button :sex, :male %>
+    <%= f.label :sex, 'male', value: :male %>
+    <%= f.radio_button :sex, :female %>
+    <%= f.label :sex, 'female', value: :female %>
+  </div>
+
   <div class="text_area">
     <%= f.label :note %>
     <%= f.text_area :note %>

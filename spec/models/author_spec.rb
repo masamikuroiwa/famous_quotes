@@ -27,4 +27,8 @@ RSpec.describe Author, type: :model do
       expect(author.errors[:note]).to be_present
     end
   end
+
+  describe 'sex' do
+    it { is_expected.to define_enum_for(:sex).with([:male, :female]) }
+  end
 end
