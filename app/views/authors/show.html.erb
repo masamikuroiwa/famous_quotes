@@ -10,5 +10,10 @@
   <%= @author.country %>
 </p>
 
+<p>
+  <strong>Note:</strong>
+  <%= simple_format(@author.note, {}, wrapper_tag: "span") %>
+</p>
+
 <%= link_to 'Edit', edit_author_path(@author) %> |
 <%= link_to 'Back', authors_path %>

@@ -21,5 +21,10 @@ RSpec.describe Author, type: :model do
       expect(author).not_to be_valid
       expect(author.errors[:country]).to be_present
     end
+    example "noteは1000文字以内" do
+      author[:note] = 'ア' * 1001
+      expect(author).not_to be_valid
+      expect(author.errors[:note]).to be_present
+    end
   end
 end
