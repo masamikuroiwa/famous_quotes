@@ -19,3 +19,5 @@
 
 # Ignore setting file.
 /config/database.yml
+/public/packs
+/node_modules
